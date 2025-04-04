@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Poor</title>
+    <script src="https://unpkg.com/scrollama"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            overflow:hidden;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            aspect-ratio: 5 / 3;
+            overflow: hidden;
+            border-radius: 0 px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .image {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+      
+        .legend {
+            position: absolute;
+            max-width: 200px;
+            top: 5%;
+            left: 2%;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 15;
+            max-height: 80%;
+            overflow-y: auto;
+        }
+
+        .legend .layer {
+            margin-bottom: 20px;
+        }
+
+        .legend .layer-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .legend .color-bar {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .legend .color-bar div {
+            width: 25px;
+            height: 25px;
+            margin-bottom: 8px;
+        }
+
+        .legend .color-bar.annual-income div:nth-child(1) { background-color: #f7fcf5; }
+        .legend .color-bar.annual-income div:nth-child(2) { background-color: #c9eac2; }
+        .legend .color-bar.annual-income div:nth-child(3) { background-color: #7bc77c; }
+        .legend .color-bar.annual-income div:nth-child(4) { background-color: #2a924b; }
+        .legend .color-bar.annual-income div:nth-child(5) { background-color: #00441b; }
+
+
+        .legend .label {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+        }
+
+        .legend .label span {
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Align the color block and label horizontally */
+        .legend .color-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .legend .color-item div {
+            width: 50px;
+            height: 25px;
+            margin-right: 40px; /* Add space between color block and text */
+        }
+
+
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <div class="container">
+            <iframe class="image" src="https://api.mapbox.com/styles/v1/chloe0625222/cm92pzwmu007p01qy5byi0irq.html?title=false&access_token=pk.eyJ1IjoiY2hsb2UwNjI1MjIyIiwiYSI6ImNtMGUza2ozaTBrazYyaXByNXU5bzQ1ZzEifQ.VzWdJo3OgzwNC9Vu_piDHQ&zoomwheel=false#11.21/49.2576/-123.1438" title="Monochrome" style="border:none;"></iframe>
+            
+    
+        </div>
+        
+        
+        <div class="legend">
+            <div class="layer">
+                <div class="layer-title">Percentage of spending >30% of Income in Rent</div>
+                <div class="color-bar annual-income">
+                    <div class="color-item">
+                        <div style="background-color: #f7fcf5;"></div><span>20%~30%</span>
+                    </div>
+                    <div class="color-item">
+                        <div style="background-color: #c9eac2;"></div><span>30%~35%</span>
+                    </div>
+                    <div class="color-item">
+                        <div style="background-color: #7bc77c;"></div><span>35%~40%</span>
+                    </div>
+                    <div class="color-item">
+                        <div style="background-color: #2a924b;"></div><span>40~50%</span>
+                    </div>
+                    <div class="color-item">
+                        <div style="background-color: #00441b;"></div><span>50%~60%</span>
+                    </div>
+                </div>
+            </div>
+
+</body>
+</html>
